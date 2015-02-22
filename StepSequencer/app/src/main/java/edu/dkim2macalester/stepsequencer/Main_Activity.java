@@ -4,14 +4,29 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-///Hopefully this works
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.GridView;
+import android.widget.ImageView;
 
-public class Grid_Layout extends ActionBarActivity {
+public class Main_Activity extends ActionBarActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_grid__layout);
+        setContentView(R.layout.main_activity_layout);
+
+        //Set up the gridview
+        GridView gridview = (GridView) findViewById(R.id.gridview);
+        gridview.setAdapter(new ImageAdapter(this));
+        //Set up the gridview logic
+        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                //change images from not_selected.png to selected0.png (lighter to darker grid cell)
+                ((ImageView) v).setImageResource(R.drawable.selected0);
+            }
+        });
     }
 
 
@@ -36,4 +51,5 @@ public class Grid_Layout extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

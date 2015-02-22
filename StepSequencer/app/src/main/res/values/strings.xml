@@ -2,7 +2,11 @@
 <resources>
 
     <string name="app_name">Step Sequencer</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string name="button_musicOptions">Options</string>
+    <string name="button_instruments">Instruments</string>
+    <string name="button_playPause">Play Pause</string>
+    <string name="button_drumsOption">Drums</string>
 
 </resources>
