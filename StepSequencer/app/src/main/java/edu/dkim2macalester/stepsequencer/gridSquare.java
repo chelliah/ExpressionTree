@@ -15,15 +15,15 @@ public class gridSquare extends Object{
 
     long id;
     private boolean selected = false;  //whether or not it's been pressed
-    private int timestamp; //x coordinate - what time it plays at
-    private int yCoord;    //y coordinate - what pitch it has/what sound it is
+    //private int timestamp; //x coordinate - what time it plays at
+    //private int yCoord;    //y coordinate - what pitch it has/what sound it is
 
 
     public void pressed() {
         this.selected = !this.selected; //swaps state when clicked
     }
 
-    public void setID(long id){
+    /*public void setID(long id){
         this.id = id;
     } //dunno if we'll need this but keeping it in just in case
 
@@ -33,16 +33,10 @@ public class gridSquare extends Object{
 
     public void setyCoord(int yCoord){
         this.yCoord = yCoord;
-    }
+    }*/
 
     public boolean getSelected(){
         return this.selected;
     }
 
-   /*
-    //Not sure if this needs to be here or not - might be in view instead.
-    private void changeImage() {
-    private void changeImage() {
-        //TODO make this work; will require a fair bit of XML, I think.
-    }*/
 }

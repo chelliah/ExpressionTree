@@ -50,10 +50,10 @@ public class Main_Activity extends ActionBarActivity {
                 for (final gridSquare square : gridModel) {
                     if (square.getSelected()){ //if true then it has been pressed
                         ArrayList<Integer> values = new ArrayList<Integer>();
-                        values.add(i);
-                        //do the thing here to make sure the coordinates get saved
+                        values.add(i); //gets list of all the coordinates
                         //call here function to compile sounds, passing in list with coords
                     }
+                    i++;
                 }
             }
         });
